@@ -6,7 +6,7 @@ import onnxruntime
 
 app = FastAPI()
 tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
-session = onnxruntime.InferenceSession("roberta-sequence-classification-9.onnx")
+session = onnxruntime.InferenceSession("../webapp/model/roberta-sequence-classification-9.onnx")
 
 @app.get("/")
 def read_root():
